@@ -259,6 +259,7 @@ class Seq2Seq(nn.Module):
             originState = beam.get_current_origin()
             ## print("[origin_state]:", originState)
             hidden = hidden[:, originState]
+            input_feeding = input_feeding[originState]
 
         xx, yy = beam.get_best()
         zz = beam.get_final()

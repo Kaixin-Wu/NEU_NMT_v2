@@ -109,8 +109,8 @@ def main():
     # seq2seq.load_state_dict(torch.load("save/seq2seq_8.pt"))
     print(seq2seq)
 
-    # model_translate(seq2seq, "save/seq2seq_6.pt", "data/valid.ch.1664", "eval/mt06.out", Lang1, Lang2, args.external_valid_script, beam_size=12, max_len=120)
-    # exit(-1)    
+    model_translate(seq2seq, "save/seq2seq_8.pt", "data/valid.ch.1664", "eval/mt06.out", Lang1, Lang2, args.external_valid_script, beam_size=12, max_len=120)
+    exit(-1)    
 
     best_val_loss = None
     ## scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=5, gamma=0.5)
